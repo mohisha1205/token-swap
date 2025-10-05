@@ -13,13 +13,11 @@ async function swapTokens({ tokenInAddr, tokenOutAddr, amountInStr, privateKey, 
 
   const tokenIn = new ethers.Contract(tokenInAddr, ERC20_ABI, wallet);
 
-  // Parse token amount based on decimals
   const decimals = await tokenIn.decimals();
   const amountIn = ethers.utils.parseUnits(amountInStr, decimals);
 
   const router = new ethers.Contract(routerAddress, routerArtifact.abi, wallet);
 
-  // Check current allowance
   const currentAllowance = await tokenIn.allowance(wallet.address, routerAddress);
 
   if (currentAllowance.lt(amountIn)) {
@@ -31,7 +29,6 @@ async function swapTokens({ tokenInAddr, tokenOutAddr, amountInStr, privateKey, 
     console.log('Sufficient allowance detected, no approval needed.');
   }
 
-  // Calculate amountOutMin with 1% slippage tolerance
   const amountsOut = await router.getAmountsOut(amountIn, [tokenInAddr, tokenOutAddr]);
   const amountOutMin = amountsOut[1].mul(99).div(100);
 

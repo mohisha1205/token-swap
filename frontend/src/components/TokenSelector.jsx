@@ -12,7 +12,6 @@ export default function TokenSelector({ provider, tokenList, onSelect, label }) 
   const [selectedToken, setSelectedToken] = useState(null);
   const [error, setError] = useState('');
 
-  // Deduplicate tokens by address (case-insensitive)
   const uniqueTokens = tokenList.filter((token, index, self) =>
     index === self.findIndex(t => t.address.toLowerCase() === token.address.toLowerCase())
   );
@@ -56,7 +55,6 @@ export default function TokenSelector({ provider, tokenList, onSelect, label }) 
         setError('');
         onSelect(null);
       } else {
-        // While user is typing incomplete address, don't clear previous token or set error
         setError('');
       }
     }

@@ -36,10 +36,7 @@ Currently, the platform is configured with a limited set of three tokens: USDC, 
 
 ### Environment Variables
 Create a `.env` file in the backend root with these variables: 
-RPC_URL
-PRIVATE_KEY
-ROUTER_ADDRESS='0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3'
-PORT=3000
+<pre> ``` RPC_URL=your_sepolia_rpc_url PRIVATE_KEY=your_private_key ROUTER_ADDRESS=0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3 PORT=3000 ``` </pre>
 
 ### Running the Backend
 

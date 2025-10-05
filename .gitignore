@@ -9,3 +9,5 @@ artifacts/
 cache/
 coverage/
 .vscode/
+contracts/Tether.sol
+contracts/UsdCoin.sol

@@ -1,5 +1,0 @@
-provider.getBalance("0x70997970c51812dc3a010c7d01b50e0d17dc79c8").then(b => console.log(ethers.utils.formatEther(b)));
-provider.getBalance("0x70997970c51812dc3a010c7d01b
-provider.getBalance("0x70997970c51812dc3a010c7d01b.formatEther(b)));
-const provider = ethers.getDefaultProvider("http://localhost:8545");
-> const provider = ethers.getDefaultProvider("http://localhost:8545");

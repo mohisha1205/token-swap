@@ -11,7 +11,6 @@ app.use(express.json());
 
 const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
 
-// ERC-20 validation
 async function isERC20(address) {
   try {
     const token = new ethers.Contract(address, ["function totalSupply() view returns (uint256)"], provider);

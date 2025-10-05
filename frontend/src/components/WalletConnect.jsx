@@ -5,17 +5,14 @@ export default function WalletConnect({ onConnect }) {
 
   useEffect(() => {
     if (window.ethereum) {
-      // Listen for account change
       window.ethereum.on('accountsChanged', (accounts) => {
         setAccount(accounts[0]);
         if (onConnect) onConnect(accounts[0]);
       });
-      // Listen for network change (optionally reload or update state)
       window.ethereum.on('chainChanged', (chainId) => {
-        window.location.reload(); // Or trigger a state update
+        window.location.reload(); 
       });
     }
-    // Cleanup listener on unmount
     return () => {
       if (window.ethereum && window.ethereum.removeListener) {
         window.ethereum.removeListener('accountsChanged', () => {});

@@ -10,7 +10,6 @@ const ERC20_ABI = [
 
 export default function SwapForm() {
   const [provider] = useState(() => new ethers.providers.JsonRpcProvider(import.meta.env.VITE_REACT_APP_ALCHEMY_API_URL));
-  // const provider = new ethers.providers.JsonRpcProvider(process.env.REACT_APP_ALCHEMY_API_URL);
 
   const [tokenList, setTokenList] = useState([]);
   const [tokenIn, setTokenIn] = useState(null);
@@ -19,7 +18,6 @@ export default function SwapForm() {
   const [userAddress, setUserAddress] = useState('');
   const [message, setMessage] = useState('');
 
-  // New balance states
   const [ethBalance, setEthBalance] = useState(null);
   const [tokenInBalance, setTokenInBalance] = useState(null);
   const [tokenOutBalance, setTokenOutBalance] = useState(null);
@@ -37,7 +35,6 @@ export default function SwapForm() {
     fetchTokenList();
   }, []);
 
-  // Fetch balances when userAddress or tokens change
   useEffect(() => {
     async function fetchBalances() {
       if (!userAddress || !ethers.utils.isAddress(userAddress)) {
@@ -99,7 +96,6 @@ export default function SwapForm() {
         setMessage(`Swap submitted.`);
 
 
-        // Wait a few seconds for state to update then refetch balances
         await new Promise(res => setTimeout(res, 3000));
         if (userAddress && ethers.utils.isAddress(userAddress)) {
           const ethBal = await provider.getBalance(userAddress);
