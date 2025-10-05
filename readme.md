@@ -36,7 +36,12 @@ Currently, the platform is configured with a limited set of three tokens: USDC, 
 
 ### Environment Variables
 Create a `.env` file in the backend root with these variables: 
-<pre> ``` RPC_URL=your_sepolia_rpc_url PRIVATE_KEY=your_private_key ROUTER_ADDRESS=0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3 PORT=3000 ``` </pre>
+```env
+RPC_URL=your_sepolia_rpc_url
+PRIVATE_KEY=your_private_key
+ROUTER_ADDRESS=0xeE567Fe1712Faf6149d80dA1E
+PORT=3000
+```
 
 ### Running the Backend
 
@@ -50,5 +55,5 @@ This will start the backend API on `http://localhost:3000` (or the port you set 
 
 Once the backend is running, use the frontend application to perform token swaps by sending requests to your backend API. The frontend communicates with the backend to trigger swaps on the Ethereum Sepolia network.
 
-
-
+### Video Demo Link
+https://drive.google.com/file/d/1IqJr1kt07lSV9NCv7BdWxZC0bzxzyaxp/view?usp=sharing
