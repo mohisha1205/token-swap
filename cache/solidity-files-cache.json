@@ -1,12 +1,12 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "F:\\Inter IIT\\uniswap_v2\\contracts\\Tether.sol": {
-      "lastModificationDate": 1759499720422,
-      "contentHash": "06375b81a6a0637af3074806fb673f51",
-      "sourceName": "contracts/Tether.sol",
+    "F:\\Inter IIT\\token_swap\\contracts\\MockERC20.sol": {
+      "lastModificationDate": 1759583917080,
+      "contentHash": "676fc8099eef4bf9ccc418dee8cd68ce",
+      "sourceName": "contracts/MockERC20.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.20",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -15,6 +15,7 @@
               "yul": false
             }
           },
+          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -32,62 +33,21 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@openzeppelin/contracts/access/Ownable.sol"
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
       ],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.20"
       ],
       "artifacts": [
-        "Tether"
+        "MockERC20"
       ]
     },
-    "F:\\Inter IIT\\uniswap_v2\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
-      "lastModificationDate": 1759498989909,
-      "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
-      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 5000,
-            "details": {
-              "yul": false
-            }
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Ownable"
-      ]
-    },
-    "F:\\Inter IIT\\uniswap_v2\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
+    "F:\\Inter IIT\\token_swap\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
       "lastModificationDate": 1759498987062,
       "contentHash": "3ae5166c6827a9cf1a7a462d1632b464",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.20",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -96,6 +56,7 @@
               "yul": false
             }
           },
+          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -124,12 +85,12 @@
         "ERC20"
       ]
     },
-    "F:\\Inter IIT\\uniswap_v2\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+    "F:\\Inter IIT\\token_swap\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
       "lastModificationDate": 1759498986375,
       "contentHash": "f07feb4a44b1a4872370da5aa70e8e46",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.20",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -138,6 +99,7 @@
               "yul": false
             }
           },
+          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -162,12 +124,12 @@
         "Context"
       ]
     },
-    "F:\\Inter IIT\\uniswap_v2\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
+    "F:\\Inter IIT\\token_swap\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
       "lastModificationDate": 1759498989311,
       "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.20",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -176,6 +138,7 @@
               "yul": false
             }
           },
+          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -200,12 +163,12 @@
         "IERC20"
       ]
     },
-    "F:\\Inter IIT\\uniswap_v2\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
+    "F:\\Inter IIT\\token_swap\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
       "lastModificationDate": 1759498989323,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.20",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -214,6 +177,7 @@
               "yul": false
             }
           },
+          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -240,12 +204,12 @@
         "IERC20Metadata"
       ]
     },
-    "F:\\Inter IIT\\uniswap_v2\\contracts\\UsdCoin.sol": {
-      "lastModificationDate": 1759499720715,
-      "contentHash": "71ed6c17a6b203a8dc47f68b485acf65",
-      "sourceName": "contracts/UsdCoin.sol",
+    "F:\\Inter IIT\\token_swap\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1759498989909,
+      "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.20",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -254,6 +218,48 @@
               "yul": false
             }
           },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "F:\\Inter IIT\\token_swap\\contracts\\UsdCoin.sol": {
+      "lastModificationDate": 1759499720715,
+      "contentHash": "71ed6c17a6b203a8dc47f68b485acf65",
+      "sourceName": "contracts/UsdCoin.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 5000,
+            "details": {
+              "yul": false
+            }
+          },
+          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -279,6 +285,48 @@
       ],
       "artifacts": [
         "UsdCoin"
+      ]
+    },
+    "F:\\Inter IIT\\token_swap\\contracts\\Tether.sol": {
+      "lastModificationDate": 1759499720422,
+      "contentHash": "06375b81a6a0637af3074806fb673f51",
+      "sourceName": "contracts/Tether.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 5000,
+            "details": {
+              "yul": false
+            }
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Tether"
       ]
     }
   }
