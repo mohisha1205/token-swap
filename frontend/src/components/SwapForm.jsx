@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import TokenSelector from './TokenSelector';
 
+
 const ERC20_ABI = [
   "function balanceOf(address) view returns (uint256)",
   "function decimals() view returns (uint8)"
 ];
 
 export default function SwapForm() {
-  const [provider] = useState(() => new ethers.providers.JsonRpcProvider('http://localhost:8545'));
+  const [provider] = useState(() => new ethers.providers.JsonRpcProvider(import.meta.env.VITE_REACT_APP_ALCHEMY_API_URL));
+  // const provider = new ethers.providers.JsonRpcProvider(process.env.REACT_APP_ALCHEMY_API_URL);
+
   const [tokenList, setTokenList] = useState([]);
   const [tokenIn, setTokenIn] = useState(null);
   const [tokenOut, setTokenOut] = useState(null);
@@ -92,7 +95,9 @@ export default function SwapForm() {
       });
       if (res.ok) {
         const data = await res.json();
-        setMessage(`Swap submitted. TxHash: ${data.txHash}`);
+        // setMessage(`Swap submitted. TxHash: ${data.txHash}`);
+        setMessage(`Swap submitted.`);
+
 
         // Wait a few seconds for state to update then refetch balances
         await new Promise(res => setTimeout(res, 3000));

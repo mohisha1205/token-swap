@@ -52,9 +52,8 @@ app.post('/swap', async (req, res) => {
   }
 });
 
-// Serve Uniswap tokenlist JSON for frontend
 app.get('/tokenlist', (req, res) => {
-  const filePath = path.resolve(__dirname, 'uniswap-tokenlist.json');
+  const filePath = path.resolve(__dirname, 'sepolia-tokenlist.json');
   try {
     const data = fs.readFileSync(filePath, 'utf-8');
     res.json(JSON.parse(data));
